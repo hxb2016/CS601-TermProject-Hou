@@ -5,12 +5,17 @@ $(function () {
   let li = $(".banner li")[0]
   let imgHeight = li.offsetHeight
   let banner = document.querySelector(".banner")
-  banner.style.height = imgHeight + "px"
+  // banner.style.height = imgHeight + "px"
 
   window.addEventListener("resize", function () {
     imgHeight = li.offsetHeight
     banner.style.height = imgHeight + "px"
   })
+
+  window.onpageshow = function () {
+    imgHeight = li.offsetHeight
+    banner.style.height = imgHeight + "px"
+  }
 
   let imgList = document.querySelector(".imgList");
   // show the left and right button when entry their area
