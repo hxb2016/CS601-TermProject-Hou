@@ -1,0 +1,62 @@
+.content {
+  margin-top: 47px;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.content #app {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-gap: 8px;
+  height: 100%;
+  color: white;
+}
+.content #app #head-portrait {
+  padding: 40px;
+  background: url('../images/back1.jpg');
+  text-align: center;
+}
+.content #app #head-portrait figure {
+  margin-bottom: 20px;
+}
+.content #app #head-portrait figure img {
+  width: 50%;
+  border-radius: 50%;
+}
+.content #app #head-portrait h2 {
+  line-height: 30px;
+  font-size: 16px;
+}
+.content #app #introduction-area {
+  background: url('../images/back2.jpg');
+  display: grid;
+  grid-template-columns: 40px auto 48px;
+}
+.content #app #introduction-area ::-webkit-scrollbar {
+  width: 5px;
+  background: url('../images/back2.jpg');
+}
+.content #app #introduction-area ::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: url('../images/back2.jpg');
+}
+.content #app #introduction-area ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #555;
+}
+.content #app #introduction-area section {
+  padding: 20px 10px 20px 10px;
+  overflow-y: scroll;
+}
+.content #app #introduction-area section p {
+  line-height: 30px;
+  font-size: 16px;
+}
+.content #app #introduction-area button {
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  cursor: pointer;
+}
+.content #app #introduction-area button img {
+  width: 40px;
+}

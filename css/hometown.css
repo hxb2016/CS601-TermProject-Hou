@@ -1,0 +1,89 @@
+.flow-chart {
+  position: relative;
+  margin: 0 auto 0;
+  width: 100%;
+}
+.flow-chart .banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.flow-chart .banner .imgList {
+  display: flex;
+  position: relative;
+  height: 600px;
+  width: 100%;
+}
+.flow-chart .banner .imgList li {
+  position: relative;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  width: 12.5%;
+}
+.flow-chart .banner .imgList li img {
+  height: 100%;
+}
+.flow-chart .banner .imgList li p {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  margin-top: 100px;
+  margin-left: 20px;
+  display: none;
+}
+.content {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: auto;
+  grid-gap: 8px 8px;
+}
+.content .content_right {
+  display: grid;
+}
+.content .content_right .nanyangVideo video {
+  width: 100%;
+}
+.content .content_right .nanyangLocation #map :hover {
+  cursor: all-scroll;
+}
+.content .content_right .nanyangLocation #map img {
+  width: 100%;
+}
+.content .content_right .nanyangLocation #map #cover {
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.content .content_right .nanyangLocation #map #glass {
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+.content .content_right .nanyangLocation #map #glass #glassImg {
+  position: relative;
+}
+.content .content_left {
+  display: grid;
+}
+.content .content_left .nanyangMap .map img {
+  width: 100%;
+}
+.content .content_left .introduction p {
+  font-size: 16px;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: auto;
+  }
+}

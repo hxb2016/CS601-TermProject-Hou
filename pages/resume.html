@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Resume</title>
+  <meta name="keywords" content="Xiaobing Hou">
+  <meta name="description" content="My name is Xiaobing Hou, from China">
+  <link rel="icon" href="../images/H.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/resume.css">
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/vue.min.js"></script>
+</head>
+
+<body>
+  <!-- nav part start **************************************-->
+  <header id="header" class="header">
+    <!-- middle part of nav *************************************-->
+    <div class="nav_middle">
+      <div class="nav_center">
+        <nav class="nav">
+          <!-- logo ****************************************-->
+          <figure class="logo">
+            <a href="#">
+              <img src="../images/xiaobing.png" alt="Xiaobing Hou">
+            </a>
+          </figure>
+          <ul>
+            <li v-for="(item,n) in mainPages" v-on:mouseenter="mouseenter($event,n)">
+              <a :href="item.href">{{item.pageName}}</a>
+              <em><img :src="arrow" alt=""></em>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="currentPage">
+        <a href="./index.html">Myself</a><a href="./resume.html"> / Resume</a>
+      </div>
+      <!-- dropdown nav -->
+      <div class="nav_child">
+        <nav class="child" v-on:mouseleave="mouseleaveSubNav($event)">
+          <ul>
+            <li v-for="subItem in mainPages[index].subPages">
+              <strong><a :href="subItem.href">{{subItem.pageName}}</a></strong>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- content*********************************-->
+    <div class="content">
+      <div id="app">
+        <div id="head-portrait">
+          <figure>
+            <img :src="photo" alt="xiaobing hou">
+            <figcaption>
+              Xiaobing Hou
+            </figcaption>
+          </figure>
+          <h2 v-for="item in commonInformation">{{item}}</h2>
+        </div>
+        <div id="introduction-area">
+          <button id="left" v-on:click="left"><img src="../images/left.png" alt=""></button>
+          <section>
+            <h2 class="title">{{sections[index].title}}</h2>
+            <p v-for="p in sections[index].content">{{p}}</p>
+          </section>
+          <button id="right" v-on:click="right"><img src="../images/right.png" alt=""></button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!--flooter******************************** -->
+  <footer class="footer">
+    <div class="footer_b">
+      <div class="num">
+        Website Views:
+        <span id="websiteViews" class="inner">
+        </span>
+      </div>
+
+      <div class="contact">
+        <span>Contact me: 7204731842; xbhou@bu.edu</span>
+      </div>
+
+      <div class="weichat">
+        <a href="#" class="weichat_1"></a>
+        <img src="../images/weichat.png" alt="" class="weichat_2">
+      </div>
+
+      <div class="copy">
+        COPYRINGHT © 2022 Xiaobing Hou. All Rights Reserved
+        <a href="#">Website Builder</a> : <a href="#">CS601-Xiaobing</a>
+      </div>
+
+      <div class="BS">
+        <span>Browse Suggestion</span>
+      </div>
+
+
+      <div class="footer_hide">
+        FireFox Google Edge Best Resolution Ratio (1366 * 768)
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="../js/header.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/resume.js"></script>
+</body>
+
+</html>

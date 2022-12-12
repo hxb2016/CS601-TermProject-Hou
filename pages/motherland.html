@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Motherland</title>
+  <meta name="keywords" content="Xiaobing Hou">
+  <meta name="description" content="My name is Xiaobing Hou, from China">
+  <link rel="icon" href="../images/H.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/motherland.css">
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/vue.min.js"></script>
+</head>
+
+<body>
+  <!-- nav part start **************************************-->
+  <header id="header" class="header">
+    <!-- middle part of nav *************************************-->
+    <div class="nav_middle">
+      <div class="nav_center">
+        <nav class="nav">
+          <!-- logo ****************************************-->
+          <figure class="logo">
+            <a href="#">
+              <img src="../images/xiaobing.png" alt="Xiaobing Hou">
+            </a>
+          </figure>
+          <ul>
+            <li v-for="(item,n) in mainPages" v-on:mouseenter="mouseenter($event,n)">
+              <a :href="item.href">{{item.pageName}}</a>
+              <em><img :src="arrow" alt=""></em>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="currentPage">
+        <a href="./motherland.html">Motherland</a>
+      </div>
+      <!-- dropdown nav -->
+      <div class="nav_child">
+        <nav class="child" v-on:mouseleave="mouseleaveSubNav($event)">
+          <ul>
+            <li v-for="subItem in mainPages[index].subPages">
+              <strong><a :href="subItem.href">{{subItem.pageName}}</a></strong>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  </header>
+  <main>
+    <!-- flow-chart**********************************-->
+    <div class="flow-chart">
+      <div class="banner">
+        <div class="box3d">
+
+        </div>
+      </div>
+    </div>
+
+    <!-- content*********************************-->
+    <div class="content">
+      <div>
+        <img src="../images/tang.jpg" alt="">
+        <div>
+          <p>Tang Dynasty (618-907) was a unified Central Plains dynasty after Sui Dynasty in Chinese history.
+            It had 21 emperors and lasted 289 years.
+            At the end of the Sui Dynasty, Li Yuan, the duke of the Tang Dynasty, took advantage of the
+            situation and raised an army in Jinyang. In 618, he proclaimed himself emperor and established
+            the Tang Dynasty with Chang 'an as its capital. After Emperor Taizong of Tang Dynasty succeeded
+            to the throne, he established the rule of Zhenguan, which laid the foundation for the prosperous
+            Tang Dynasty. Tang Gaozong Chengzhen Guan legacy, created the "rule of permanent emblem". In
+            690, Wu Zetian changed the title to Zhou, and after the Shenlong Revolution in 705, the title of
+            Tang was restored. During the reign of Emperor Xuanzong of Tang Dynasty, Kaiyuan Flourishing
+            appeared, which made the Tang Dynasty reach its heyday. At the end of Tianbao's reign, the
+            population of China reached about 80 million. After the Rebellion of An and Shi, vassal towns
+            were divided and eunuchs monopolized power, and the national power gradually declined. After the
+            reign of Emperor Xianzong Yuan He Zhongxing, Emperor Wuchang Huichang Zhongxing and Emperor
+            Xuanzong Dazhong, the national power was restored. The ensuing peasant uprising at the end of
+            Tang Dynasty destroyed the foundation of Tang rule and increased the power of Fanzhen. In 907,
+            Zhu Wen, the general of Fanzhen town, usurped the throne and the Tang Dynasty fell.
+            The Tang Dynasty covered an unprecedented territory, reaching its peak from the Sea of Japan in
+            the east, Annam in the south, the Aral Sea in the west, and Lake Baikal in the north. The Tang
+            Dynasty adopted the policy of jimi for the surrounding ethnic groups, and established close
+            political and economic ties with all ethnic groups through conferring, marriage and other ways.
+            Japan, Nanzhao, Silla, Bohai and other countries sent people to learn the system and culture of
+            the Tang Dynasty.
+            As one of the most powerful countries in the world at that time, the Tang Dynasty enjoyed a wide
+            reputation and had many contacts with Asian and European countries. After the Tang Dynasty,
+            overseas Chinese were often called "Tang people". The Tang Dynasty actively exchanged and
+            learned from other countries, which made its economy, society, culture and art show diversified
+            and open features. A large number of famous artists emerged in the fields of poetry,
+            calligraphy, painting and music, such as Li Bai, Du Fu, the master of poetry, Bai Juyi, Yan
+            Zhenqing, the master of painting Wu Daozi, and Li Guian, the musician.</p>
+        </div>
+      </div>
+      <div>
+        <img src="../images/song.jpg" alt="">
+        <div>
+          <p>The Song Dynasty (960-1279) was a dynasty in Chinese history that followed five dynasties and ten
+            kingdoms and began with the Yuan Dynasty. It was divided into two phases, the Northern Song and
+            the Southern Song. It had a total of 18 emperors and lasted 319 years.
+            In 960, Zhao Kuangyin, a general of the Forbidden Army of the Later Zhou Dynasty, seized the
+            throne through the Chenqiao mutiny, made Kaifeng Prefecture, Tokyo as the capital, and
+            established the Song Dynasty. Zhao Kuangyin, in order to avoid the chaos of vassal power and
+            eunuch dictatorship in the late Tang Dynasty, adopted the policy of worshiping literature and
+            suppressing military power, strengthened the centralization of power, and deprived the generals
+            of military power. After Emperor Taizong ascended the throne, he put an end to the secession. In
+            1004, the Song and Liao reached an alliance between Chanyuan and the Song Dynasty was gradually
+            ruled. After Renzong of Song Dynasty, the social crisis of Song Dynasty became more and more
+            serious. After Emperor Shenzong of Song Dynasty ascended the throne, he appointed Wang Anshi and
+            others to carry out reform activities, which achieved some results, but made the Song Dynasty
+            deeply entangled in disputes between the old and new parties. From 1125, the Jin Dynasty invaded
+            the south in a large scale until the capture of Tokyo in 1127 and the collapse of the Northern
+            Song Dynasty. In the same year, Zhao Gou, King of Kang, ascended the throne in Nanjing in the
+            name of Tianfu and established the Southern Song Dynasty. After the signing of the Peace Treaty
+            of Shaoxing, the Southern Song Dynasty was confined to the Qinling Mountains and Huaihe River.
+            During the reign of Emperor Xiaozong and Emperor Ningzong, two expeditions to the north ended in
+            failure. In 1234, the Song allied with the Mongols to destroy the Jin, and fought the Song and
+            Yuan war with the Mongols. In 1276, the Yuan army captured Lin 'an Prefecture. After the Battle
+            of Yashan in 1279, the Southern Song Dynasty fell.
+            The Song Dynasty was a time of high prosperity of commodity economy, culture, education and
+            scientific innovation in Chinese history. Some scholars estimated that in 1000, China's GDP
+            accounted for 22.7% of the world economy at that time. In addition, the Song Dynasty saw the
+            revival of Confucianism and the formation of Neo-Confucianism, the rapid development of science
+            and technology, and relatively enlightened politics. During this period, the population of the
+            Song Dynasty increased rapidly. Some scholars estimated that the total population of the Song
+            Dynasty reached 126 million in 1124. Chinese historian Chen Yinke once said, "The culture of the
+            Chinese nation has evolved over thousands of years, and it originated in the Zhao and Song
+            dynasties." Some scholars in western and Japanese historians also believe that the Song Dynasty
+            was the period of Renaissance and economic revolution in Chinese history.</p>
+        </div>
+
+      </div>
+      <div>
+        <img src="../images/yuan.jpg" alt="">
+        <div>
+          <p>The Yuan Dynasty (1271-1368) is the first unified dynasty founded by the ethnic minorities in
+            the history of China. The rulers of the Mongoliums are the children of Zhijin. The succession of
+            five dynasties and eleven emperors lasted for 162 years from the establishment of Mongol regime
+            by Genghis Khan in 1206, and 98 years from the establishment of the state title Yuan by Kubilie.
+            After the Yuan Dynasty withdrew from the Central Plains, the Northern Yuan regime lasted
+            until 1402.
+            In 1206, Genghis Khan unified the Mongolian ministries and established the Great Mongolia. The
+            Western Liao, Western Xia, Khwarazm, Jin and other regimes were conquered successively. After
+            the death of Mongkor Khan, a dispute arose between Ariq and Kublai Khan for the throne,
+            prompting the division of Greater Mongolia. In 1260, Kublai Khan ascended the throne as emperor,
+            established the Yuan Dynasty as the "Middle Unification" and made Kaiping Fu (the upper capital)
+            the capital. In 1271, Kublai Khan took the meaning of "Great Zai Qianyuan" in the Book of
+            Changes and changed the title of his kingdom to "Great Yuan" and made Dadu his capital in the
+            following year. In 1279, the exile regime of the Southern Song Dynasty was completely destroyed,
+            ending the long period of division since the end of the Tang Dynasty. After that, the
+            Yuan Dynasty continued its foreign expansion, attacking Japan, Burma, Vietnam, Java, etc., but
+            all failed. In the middle of the Yuan Dynasty, the succession of the imperial throne was
+            disordered and the coup was frequent. The politics was not on the right track, and the
+            Sinicization was delayed and the development was stagnant. In the later period of the Yuan
+            Dynasty, the political corruption, the interference of the powerful ministers, the national and
+            class contradictions were increasingly intensified, leading to the peasant uprising at the end
+            of the Yuan Dynasty. In 1368, Zhu Yuanzhang founded the Ming Dynasty, and then launched a
+            northern expedition to expel the Yuan Court and capture Dadu. Since then, the Yuan Court
+            retreated to Mobei, known as the Northern Yuan. In 1402, Yuan minister Lili usurped the power to
+            establish Tatar, and the Northern Yuan collapsed.
+            During the Yuan Dynasty, the unified multi-ethnic state was further consolidated and its
+            territory exceeded that of previous dynasties. The Yuan Dynasty abolished Shangshu Province and
+            Menxia Province, and retained Zhongshu province with the Privy Council and the Yushitai in
+            charge of government, military and supervision. Local provinces implemented the provincial
+            system, which was the first of its kind in China.
+            The Yuan Dynasty was prosperous in commodity economy and overseas trade, and had frequent
+            diplomatic exchanges with other countries. In terms of culture, Yuan Opera and other cultural
+            forms appeared, which became more secular.</p>
+        </div>
+
+      </div>
+      <div>
+        <img src="../images/ming.jpg" alt="">
+        <div>
+          <p>The Ming Dynasty (1368 -- 1644), a dynasty in Chinese history, was founded by Zhu Yuanzhang,
+            Emperor Taizu of the Ming Dynasty. The capital was established in Nanjing in the early period
+            and moved to Beijing in the Ming Chengzu period. Sixteen emperors, 276 years in total.
+            At the end of the Yuan, the Red Scarf uprising broke out, and Zhu Yuanzhang joined Guo Zixing's
+            team. In 1364, he became King of Wu, known as Western Wu in history. In early 1368, he
+            proclaimed himself emperor, with the title of Daming and the capital of Nanjing. In 1421, Zhu Di
+            moved the capital to Beijing and made Nanjing his secondary capital. After the reign of Hongwu,
+            the reign of Yongle, the reign of Renxuan and so on, the early Ming Dynasty had clear politics
+            and strong national strength. In 1449, by the change of civil castle from prosperity to decline,
+            after Hongzhi Zhongxing, Wanli Zhongxing national power recovery. In the late Ming Dynasty, due
+            to political corruption, Donglin party rivalry and natural disasters, the national strength
+            declined and peasant uprising broke out. In 1644, Li Zicheng invaded Beijing, Emperor Chongzhen
+            hanged himself, the Ming Dynasty collapsed, and the Qing army entered the customs. The imperial
+            family of the Ming Dynasty established a number of regimes in the south, known as the Southern
+            Ming Dynasty. The Qing army successively defeated the regimes of Hongguang, Longwu and Shaowu.
+            In 1662, Emperor Yongli was killed and the Southern Ming Dynasty was destroyed. In 1683, the
+            Qing army captured Taiwan, and Ming Zheng of Zhengshuo of Fengming Dynasty was overthrown.
+            The territory of the Ming Dynasty included the Han Dynasty, reaching the Sea of Japan and the
+            outer Hinggan Mountains in the northeast, and then shrinking to the Liaohe River basin. North Da
+            Yin Mountain, retreat to the Ming Great Wall; In the west, it reached Hami, Xinjiang, and then
+            retreated to Jiayuguan. Southwest to Burma and Siam in the north, and then back to about the
+            present Yunnan; And in the Tibetan region has the Jimi garrison, also had recovered Annan.
+            During the Ming Dynasty, the absolute monarchy was strengthened unprecedentedly, and the
+            multi-ethnic countries were further unified and consolidated. In the early Ming Dynasty, the
+            prime minister was dismissed and the factory guard spy agency was set up, which strengthened the
+            centralization of authoritarianism, but also foreshadowed the eunuch dictatorship in the middle
+            and late period. The anti - feudalism struggle of peasants in Ming Dynasty also entered a new
+            stage.
+            During the Ming Dynasty, handicraft industry and commodity economy prospered, a large amount of
+            commercial capital was transformed into industrial capital, and commercial market towns and the
+            budding of capitalism appeared. Culture and art show the trend of secularization. According to
+            the Ming Shi Record, the peak population was 71.85 million, but there are different accounts of
+            over 100 million and nearly 200 million</p>
+        </div>
+
+      </div>
+      <div>
+        <img src="../images/qing.jpg" alt="">
+        <div>
+          <p>The Qing Dynasty (1636-1912), the last feudal dynasty in Chinese history, had a total of 12
+            emperors ruled by Aisin Gioro. Since Nurhachi founded the later Jin, total 296 years. Since
+            Emperor Huangtaiji changed the title of the kingdom to Qing Dynasty, it lasted 276 years. It was
+            268 years from the beginning of the army clearance and the establishment of a national regime.
+            In 1616, Nurhachi, the Nuzhen leader of Jianzhou, established the Later Jin Dynasty. In 1636,
+            the three ethnic groups of Han, Manchu and Mongolian submitted a proposal of persuasion.
+            Huangtaiji proclaimed himself emperor and changed the kingdom's title to Qing Dynasty. In 1644,
+            Wu Sangui, the Ming general stationed at Shanhaiguan, surrendered to the Qing Dynasty, and
+            Duergun led the Qing troops to pass. Within 20 years after entering the customs, the regimes of
+            Dashun, Daxi and Nanming were pacified. After that, he put down the chaos of San Francisco,
+            unified Taiwan, and completed the national reunification. During the three dynasties of
+            Kangyongqian, China's traditional society achieved unprecedented development achievements. Land
+            reclamation, abundant products, the social life of the small-scale peasant economy is prosperous
+            and stable, and the overall national strength is strong. After the Opium War, many of them were
+            invaded by foreign powers and carried out modernization exploration and reform such as the
+            Westernization Movement and the Reform Movement of 1898. On February 12, 1912, Beiyang Minister
+            Yuan Shikai induced the Qing Emperor Puyi to abdicate and issued an edict on the abdication of
+            the Qing Emperor, which ended the Qing Dynasty.
+            During the Qing Dynasty, the unified multi-ethnic state was consolidated and developed. The
+            rulers of the Qing Dynasty unified the Mongolian provinces, incorporated Xinjiang and Tibet into
+            the territory, and actively safeguarded the integrity of national territorial sovereignty.
+            During the reign of Qianlong, China was finally established as a unified multi-ethnic world
+            power. At its peak, the Qing Dynasty reached as far as the Scallion Ridge and Balkhash Lake in
+            the west, the Tangnuliang Sea in the northwest, Mobei and Siberia in the north, the Pacific
+            Ocean (including Sakhalin Island) in the east, and the Nansha Islands in the south. Including
+            more than 50 ethnic groups, the country is unprecedentedly unified.
+            During this period, the absolutism of ancient China reached its peak. [21] In the early Qing
+            Dynasty, agriculture and commerce were developed, and dense commercial cities appeared in the
+            south of the Yangtze River, and large commercial clans appeared in the whole country. On this
+            basis, the population passed the 400 million mark, accounting for nearly half of the world's
+            total population of one billion.</p>
+        </div>
+
+      </div>
+      <div>
+        <img src="../images/now.jpg" alt="">
+        <div>
+          <p>The People's Republic of China (hereinafter referred to as "China"), founded on October 1, 1949,
+            is a
+            socialist country under the people's democratic dictatorship led by the working class and based
+            on
+            the alliance of workers and peasants, located in the east of Asia and on the west coast of the
+            Pacific Ocean. With the five-star red flag as the national flag, the "March of the Volunteers"
+            as
+            the national anthem, and the national emblem as the national flag, Tian 'anmen, gear and ears of
+            wheat and rice, the common language is Mandarin and standard Chinese characters. The capital of
+            Beijing is a unified multi-ethnic country composed of 56 ethnic groups with the Han as the main
+            body.
+            China has a land area of about 9.6 million square kilometers, a coastline of more than 18,000
+            kilometers in the east and south, and a total sea area of about 4.73 million square kilometers.
+            There are more than 7,600 islands, of which Taiwan Island is the largest with an area of 35,798
+            square kilometers. China has borders with 14 countries and maritime neighbors with eight
+            countries.
+            The provincial-level administrative regions are divided into 23 provinces, 5 autonomous regions,
+            4
+            municipalities directly under the Central Government and 2 special administrative regions.
+            China is one of the countries with the longest history in the world, with a splendid culture and
+            glorious revolutionary tradition. China leads the world in the number of world heritage sites.
+            After
+            the founding of New China in 1949, it entered a period of socialist revolution and construction.
+            In
+            1956, the transition to socialism was realized. Since then, socialist construction has made
+            twists
+            and turns in its exploration. After the end of the "Cultural Revolution", we carried out reform
+            and
+            opening up and concentrated our efforts on socialist modernization along the road of socialism
+            with
+            Chinese characteristics. After years of hard work, socialism with Chinese characteristics has
+            entered a new era.
+            China is the developing country with the largest population, the third largest land area and the
+            second largest economy in the world. It will continue to be the largest contributor to global
+            economic growth, with its economic aggregate exceeding 100 trillion yuan by 2020. China adheres
+            to
+            an independent foreign policy of peace. As a permanent member of the United Nations Security
+            Council
+            and an important member of many international organizations, China is considered one of the
+            potential superpowers.</p>
+        </div>
+      </div>
+    </div>
+    <!-- bottom to top************* -->
+    <div class="sidebar">
+      <a href="javascript:;" class="sidebar_top"></a>
+    </div>
+  </main>
+
+  <!--flooter******************************** -->
+  <footer class="footer">
+
+    <div class="footer_b">
+      <div class="num">
+        Website Views:
+        <span id="websiteViews" class="inner">
+        </span>
+      </div>
+
+      <div class="contact">
+        <span>Contact me: 7204731842; xbhou@bu.edu</span>
+      </div>
+
+      <div class="weichat">
+        <a href="#" class="weichat_1"></a>
+        <img src="../images/weichat.png" alt="" class="weichat_2">
+      </div>
+
+      <div class="copy">
+        COPYRINGHT © 2022 Xiaobing Hou. All Rights Reserved
+        <a href="#">Website Builder</a> : <a href="#">CS601-Xiaobing</a>
+      </div>
+
+      <div class="BS">
+        <span>Browse Suggestion</span>
+      </div>
+
+
+      <div class="footer_hide">
+        FireFox Google Edge Best Resolution Ratio (1366 * 768)
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="../js/header.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/motherland.js"></script>
+
+  <script>
+    // *****************Create imgs for 3D box*****************
+    let box3d = document.querySelector(".box3d")
+    let imgName = ["../images/tang.jpg", "../images/song.jpg", "../images/yuan.jpg", "../images/ming.jpg", "../images/qing.jpg", "../images/now.jpg"]
+    for (let i = 0; i < 6; i++) {
+      let divBox = document.createElement("div")
+
+      let img = document.createElement("img")
+      img.setAttribute("src", imgName[i])
+      img.setAttribute("alt", "")
+
+      divBox.appendChild(img)
+      box3d.appendChild(divBox)
+    }
+  </script>
+</body>
+
+</html>

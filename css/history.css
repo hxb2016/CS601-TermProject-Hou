@@ -1,0 +1,51 @@
+#historicalSites {
+  margin-top: 47px;
+}
+#historicalSites ul {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  grid-gap: 2px;
+}
+#historicalSites ul li img {
+  width: 100%;
+}
+#historicalSites ul li div {
+  color: white;
+}
+#historicalSites ul li div p {
+  width: 100%;
+  text-align: center;
+}
+.content {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(6, auto);
+  grid-gap: 8px;
+}
+.content div {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-gap: 4px;
+  height: 100%;
+}
+.content div figure {
+  width: 100%;
+  transform: skew(-5deg);
+}
+.content div figure img {
+  width: 100%;
+}
+.content div article {
+  background: url('../images/back4.jpg');
+  transform: skew(-5deg);
+  color: white;
+  padding: 10px;
+}
+.content div article h2 {
+  margin-bottom: 10px;
+}
+.content div article p {
+  line-height: 25px;
+  font-size: 16px;
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HomePage-Hou</title>
+  <meta name="keywords" content="Xiaobing Hou">
+  <meta name="description" content="My name is Xiaobing Hou, from China">
+  <link rel="icon" href="../images/H.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/index.css">
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/vue.min.js"></script>
+</head>
+
+<body>
+  <!-- nav part start **************************************-->
+  <header id="header" class="header">
+    <!-- middle part of nav *************************************-->
+    <div class="nav_middle">
+      <div class="nav_center">
+        <nav class="nav">
+          <!-- logo ****************************************-->
+          <figure class="logo">
+            <a href="#">
+              <img src="../images/xiaobing.png" alt="Xiaobing Hou">
+            </a>
+          </figure>
+          <ul>
+            <li v-for="(item,n) in mainPages" v-on:mouseenter="mouseenter($event,n)">
+              <a :href="item.href">{{item.pageName}}</a>
+              <em><img :src="arrow" alt=""></em>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="currentPage">
+        <a href="./index.html">Myself</a>
+      </div>
+      <!-- dropdown nav -->
+      <div class="nav_child">
+        <nav class="child" v-on:mouseleave="mouseleaveSubNav($event)">
+          <ul>
+            <li v-for="subItem in mainPages[index].subPages">
+              <strong><a :href="subItem.href">{{subItem.pageName}}</a></strong>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  </header>
+  <main>
+    <!-- flow-chart-->
+    <div class="flow-chart">
+      <div class="leftButton"><a href="#"><img src="../images/left.png" alt="left"></a></div>
+      <div class="rightButton"><a href="#"><img src="../images/right.png" alt="right"></a></div>
+      <div class="banner">
+        <ul class="imgList">
+        </ul>
+      </div>
+    </div>
+
+    <!-- content-->
+    <div class="content">
+      <!-- content left part-->
+      <div class="content_left_1">
+        <figure>
+          <img class="locationImg" src="../images/location.jpg" alt="img">
+        </figure>
+      </div>
+      <!-- content right part-->
+      <div class="colleges">
+        <ul>
+          <li class="s1">
+            <a style="display: block;" target="_blank" href="http://www.nywz.net/">
+              <div class="s1_top">
+                <img src="../images/school1.png" alt="img">
+              </div>
+              <div class="s1_bottom">
+                <h3>High School</h3>
+                <p>Nanyang Fifth High School</p>
+              </div>
+              <div class="s1_img">
+                <img src="../images/s5835a34f91d4b.png" alt="imgRight">
+              </div>
+            </a>
+          </li>
+
+          <li class="s2">
+            <a style="display: block;" target="_blank" href="https://www.zut.edu.cn/">
+              <div class="s2_top">
+                <img src="../images/school2.png" alt="img">
+              </div>
+              <div class="s2_bottom">
+                <h3>Undergraduate School</h3>
+                <p>Zhongyuan Institute of Technology</p>
+              </div>
+              <div class="s2_img">
+                <img src="../images/s5835a37a3ba85.png" alt="imgRight">
+              </div>
+            </a>
+          </li>
+
+          <li class="s3">
+            <a style="display: block;" target="_blank" href="https://www.tjcu.edu.cn/">
+              <div class="s3_top">
+                <img src="../images/school3.png" alt="img">
+              </div>
+              <div class="s3_bottom">
+                <h3>Graduate School</h3>
+                <p>Tianjin University of Commerce</p>
+              </div>
+              <div class="s3_img">
+                <img src="../images/s5835a3934e72b.png" alt="imgRight">
+              </div>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="welcome">
+        <h2>Welcome!!</h2>
+      </div>
+      <!-- historicalSites start -->
+      <div class="historicalSites">
+        <h2 class="title">Scenery of Humanity</h2>
+        <ul>
+        </ul>
+      </div>
+    </div>
+    <!-- back top -->
+    <div class="sidebar">
+      <a href="javascript:;" class="sidebar_top"></a>
+    </div>
+  </main>
+
+  <!--flooter -->
+  <footer class="footer">
+    <div class="footer_b">
+      <div class="num">
+        Website Views:
+        <span id="websiteViews" class="inner">
+        </span>
+      </div>
+
+      <div class="contact">
+        <span>Contact me: 7204731842; xbhou@bu.edu</span>
+      </div>
+
+      <div class="weichat">
+        <a href="#" class="weichat_1"></a>
+        <img src="../images/weichat.png" alt="" class="weichat_2">
+      </div>
+
+      <div class="copy">
+        COPYRINGHT © 2022 Xiaobing Hou. All Rights Reserved
+        <a href="#">Website Builder</a> : <a href="#">CS601-Xiaobing</a>
+      </div>
+
+      <div class="BS">
+        <span>Browse Suggestion</span>
+      </div>
+
+
+      <div class="footer_hide">
+        FireFox Google Edge Best Resolution Ratio (1366 * 768)
+      </div>
+
+    </div>
+  </footer>
+  <script src="../js/index.js"></script>
+  <script src="../js/header.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/move_shadow.js"></script>
+  <script>
+    // *********Create imgs for banner*********
+    let imgListUl = document.querySelector(".imgList")
+
+    for (let i = 10; i > 0; i--) {
+
+      let li = document.createElement("li")
+
+      let img = document.createElement("img")
+      img.setAttribute("src", "../images/" + i + ".jpg")
+      img.setAttribute("alt", "")
+
+      li.appendChild(img)
+      imgListUl.appendChild(li)
+    }
+    // ********Create historicalSites********
+    let historicalSitesData = [
+      {
+        href: "https://baike.baidu.com/item/%E7%99%BD%E9%A9%AC%E5%AF%BA/4680?fr=aladdin",
+        background: "../images/baimasi.png",
+        src: "../images/s5863704a46b10.png",
+        text: "White Horse Temple"
+      },
+      {
+        href: "https://baike.baidu.com/item/%E5%A4%A7%E7%9B%B8%E5%9B%BD%E5%AF%BA/166309?fr=aladdin",
+        background: "../images/daxiangguosi.png",
+        src: "../images/s58636fe246e0a.png",
+        text: "Daxiangguo Temple"
+      },
+      {
+        href: "https://baike.baidu.com/item/%E9%BE%99%E9%97%A8%E7%9F%B3%E7%AA%9F/274?fr=aladdin",
+        background: "../images/longmenshiku.png",
+        src: "../images/s58bcfc20c5076.png",
+        text: "Longmen Grottoes"
+      },
+      {
+        href: "https://baike.baidu.com/item/%E4%BA%91%E5%8F%B0%E5%B1%B1%E9%A3%8E%E6%99%AF%E5%8C%BA/5172?fr=aladdin",
+        background: "../images/yuntaishan.png",
+        src: "../images/s58bcfc33c893d.png",
+        text: "Yuntai Mountain"
+      },
+      {
+        href: "https://baike.baidu.com/item/%E6%96%B0%E9%83%91%E5%B8%82%E9%BB%84%E5%B8%9D%E6%95%85%E9%87%8C%E6%99%AF%E5%8C%BA/24624851?fromtitle=%E9%BB%84%E5%B8%9D%E6%95%85%E9%87%8C&fromid=367195&fr=aladdin",
+        background: "../images/huangdi.png",
+        src: "../images/s58bcfc4e63ba3.png",
+        text: "Hometown of Emperor"
+      }
+    ]
+    let historicalSites = document.querySelector(".historicalSites ul")
+    for (i in historicalSitesData) {
+
+      let li = document.createElement("li")
+      li.style.background = "url(" + historicalSitesData[i].background + ") repeat top"
+
+      let a = document.createElement("a")
+      a.setAttribute("target", "_blank")
+      a.setAttribute("href", historicalSitesData[i].href)
+
+      let img = document.createElement("img")
+      img.setAttribute("src", historicalSitesData[i].src)
+      img.setAttribute("alt", "")
+
+      let p = document.createElement("p")
+      p.innerText = historicalSitesData[i].text
+
+      a.appendChild(img)
+      a.appendChild(p)
+
+      li.appendChild(a)
+      historicalSites.appendChild(li)
+    }
+    //************Move shadow************
+    var elements = document.querySelectorAll('.historicalSites li');
+    for (i = 0; i < elements.length; i++) {
+      move_shadow(elements[i], 0.4, 'black', 0.5);
+    }
+
+    var ele = document.querySelector('.content_left_1');
+    move_shadow(ele, 0.4, 'black', 0.7);
+  </script>
+</body>
+
+</html>
